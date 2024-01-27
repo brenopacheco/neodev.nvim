@@ -25,6 +25,8 @@ M.defaults = {
   -- needs lua-language-server >= 3.6.0
   pathStrict = true,
   debug = false,
+  --- After setting up lsp config, change the config if needed
+  on_config = function(config) end,
 }
 
 --- @type LuaDevOptions

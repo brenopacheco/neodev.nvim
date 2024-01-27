@@ -108,6 +108,10 @@ function M.on_new_config(config, root_dir)
     for _, dir in ipairs(ignoreDir) do
       table.insert(config.settings.Lua.workspace.ignoreDir, dir)
     end
+
+    if opts.on_config then
+      opts.on_config(config)
+    end
   end
 end
 
